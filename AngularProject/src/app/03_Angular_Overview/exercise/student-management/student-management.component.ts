@@ -7,29 +7,30 @@ import {Student} from '../student/Student';
   styleUrls: ['./student-management.component.scss']
 })
 export class StudentManagementComponent implements OnInit {
+  studentDetail: Student;
   student: Student[] = [
     {
       id: 1,
-      name: 'Long',
+      name: 'Bùi Phi Long',
       age: 25,
       mark: 10,
     },
     {
       id: 2,
-      name: 'Long',
+      name: 'Đỗ Hữu Hưng',
       age: 25,
       mark: 10,
     },
     {
       id: 3,
-      name: 'Long',
-      age: 25,
+      name: 'Trần Anh Khoa',
+      age: 38,
       mark: 10,
     },
     {
       id: 4,
-      name: 'Long',
-      age: 25,
+      name: 'Nguyễn Văn Linh',
+      age: 23,
       mark: 10,
     },
     ];
@@ -39,4 +40,7 @@ export class StudentManagementComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  getStudentDetail(student: Student) {
+    this.studentDetail = student;
+  }
 }

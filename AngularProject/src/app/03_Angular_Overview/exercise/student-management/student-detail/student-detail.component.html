@@ -1,0 +1,12 @@
+<div class="card" style="width: 27rem;">
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">ID: {{student.id}}</li>
+    <li class="list-group-item">Name: {{student.name}}</li>
+    <li class="list-group-item">Age: {{student.age}}</li>
+    <li class="list-group-item">Mark: {{student.mark}}</li>
+    <li class="list-group-item">
+      <h4>Set Mark</h4>
+      <input class="form-control" type="range" min="0" max="10" (change)="setMark($event.target.value)" [value]="student.mark">
+    </li>
+  </ul>
+</div>

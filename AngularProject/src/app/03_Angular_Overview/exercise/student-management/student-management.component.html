@@ -8,6 +8,7 @@
       <th scope="col">Name Student</th>
       <th scope="col">Age Student</th>
       <th scope="col">Mark Student</th>
+      <th scope="col">Result Student</th>
       <th scope="col">Action</th>
     </tr>
   </thead>
@@ -17,6 +18,16 @@
     <td>{{student.name}}</td>
     <td>{{student.age}}</td>
     <td>{{student.mark}}</td>
+    <td><h3 *ngIf="student.mark>5; else failedCase" style="color: springgreen; font-size: 30px">Pass</h3>
+      <ng-template #failedCase><h3  style="color: red; font-size: 30px">Failed</h3></ng-template>
+    </td>
+    <td>
+      <button class="btn btn-primary" (click)="getStudentDetail(student)">Detail</button>
+    </td>
   </tr>
   </tbody>
 </table>
+
+<div *ngIf="studentDetail" class="col-lg-3 d-inline float-left">
+  <app-student-detail [student]="studentDetail"></app-student-detail>
+</div>

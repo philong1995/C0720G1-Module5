@@ -7,12 +7,32 @@ import {Student} from '../student/Student';
   styleUrls: ['./student-management.component.scss']
 })
 export class StudentManagementComponent implements OnInit {
-  student: Student = {
-    id: 1,
-    name: 'Long',
-    age: 25,
-    mark: 10,
-  };
+  student: Student[] = [
+    {
+      id: 1,
+      name: 'Long',
+      age: 25,
+      mark: 10,
+    },
+    {
+      id: 2,
+      name: 'Long',
+      age: 25,
+      mark: 10,
+    },
+    {
+      id: 3,
+      name: 'Long',
+      age: 25,
+      mark: 10,
+    },
+    {
+      id: 4,
+      name: 'Long',
+      age: 25,
+      mark: 10,
+    },
+    ];
 
   constructor() { }
 

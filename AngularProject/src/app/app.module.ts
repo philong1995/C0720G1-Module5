@@ -9,6 +9,8 @@ import { StudentManagementComponent } from './03_Angular_Overview/exercise/stude
 import { ColorPickerComponent } from './03_Angular_Overview/exercise/color-picker/color-picker.component';
 import { CalculateComponent } from './03_Angular_Overview/exercise/calculate/calculate.component';
 import {FormsModule} from '@angular/forms';
+import { HackerNewsComponent } from './03_Angular_Overview/exercise/hacker-news/hacker-news.component';
+import { LikesComponent } from './03_Angular_Overview/exercise/likes/likes.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import {FormsModule} from '@angular/forms';
     PetInfoComponent,
     StudentManagementComponent,
     ColorPickerComponent,
-    CalculateComponent
+    CalculateComponent,
+    HackerNewsComponent,
+    LikesComponent,
   ],
   imports: [
     BrowserModule,

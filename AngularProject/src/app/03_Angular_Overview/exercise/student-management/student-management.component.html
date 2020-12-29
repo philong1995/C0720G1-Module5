@@ -1,5 +1,22 @@
-<h1>Student</h1>
-<h3>Id student: {{student.id}} </h3>
-<h3>Name student: {{student.name}} </h3>
-<h3>Age student: {{student.age}} </h3>
-<h3>Mark student: {{student.mark}} </h3>
+<h2>
+    Student List
+</h2>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">ID Student</th>
+      <th scope="col">Name Student</th>
+      <th scope="col">Age Student</th>
+      <th scope="col">Mark Student</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let student of student">
+    <th scope="row">{{student.id}}</th>
+    <td>{{student.name}}</td>
+    <td>{{student.age}}</td>
+    <td>{{student.mark}}</td>
+  </tr>
+  </tbody>
+</table>

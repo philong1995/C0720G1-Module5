@@ -13,7 +13,9 @@
     <option value="/">/</option>
   </select>
   <input type="number" class="form-input"
-         [(ngModel)]="second">
+         [value]="second"
+         (change)="onSecondChange($event.target.value)">
+<!--         [(ngModel)]="second">-->
 </div>
 <div>
   <button class="form-input" (click)="calculate()">

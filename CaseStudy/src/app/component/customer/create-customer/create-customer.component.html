@@ -1,0 +1,88 @@
+<div class="container-fluid">
+  <div class="container">
+    <h1 class="list-title">Create Customer</h1>
+    <form [formGroup]="formGroup" (ngSubmit)="saveCustomer()">
+      <div class="row">
+        <div class="form-group col">
+          <label for="exampleInputEmail1">Name</label>
+          <input formControlName="name" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <div *ngFor="let validation of validation_messages.name">
+            <div class="error-message" style="color: red"
+                       *ngIf="formGroup.get('name').hasError(validation.type) && (formGroup.get('name').dirty || formGroup.get('name').touched)">
+              {{validation.message}}
+            </div>
+          </div>
+        </div>
+        <div class="form-group col">
+          <label for="exampleInputPassword2">Date of birth</label>
+          <input formControlName="dateOfBirth" type="date" class="form-control" id="exampleInputPassword2">
+          <div *ngFor="let validation of validation_messages.dateOfBirth">
+            <div class="error-message" style="color: red"
+                 *ngIf="formGroup.get('dateOfBirth').hasError(validation.type) && (formGroup.get('dateOfBirth').dirty || formGroup.get('dateOfBirth').touched)">
+              {{validation.message}}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="form-group col">
+          <label for="idCard">ID card</label>
+          <input formControlName="idCard" type="text" class="form-control" id="idCard">
+          <div *ngFor="let validation of validation_messages.idCard">
+            <div class="error-message" style="color: red"
+                 *ngIf="formGroup.get('idCard').hasError(validation.type) && (formGroup.get('idCard').dirty || formGroup.get('idCard').touched)">
+              {{validation.message}}
+            </div>
+          </div>
+        </div>
+        <div class="form-group col">
+          <label for="phoneNumber">Phone number</label>
+          <input formControlName="phoneNumber" type="text" class="form-control" id="phoneNumber">
+          <div *ngFor="let validation of validation_messages.phoneNumber">
+            <div class="error-message" style="color: red"
+                 *ngIf="formGroup.get('phoneNumber').hasError(validation.type) && (formGroup.get('phoneNumber').dirty || formGroup.get('phoneNumber').touched)">
+              {{validation.message}}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group col">
+          <label for="email">Email</label>
+          <input formControlName="email" type="email" class="form-control" id="email">
+          <div *ngFor="let validation of validation_messages.email">
+            <div class="error-message" style="color: red"
+                 *ngIf="formGroup.get('email').hasError(validation.type) && (formGroup.get('email').dirty || formGroup.get('email').touched)">
+              {{validation.message}}
+            </div>
+          </div>
+        </div>
+        <div class="form-group col">
+          <label for="email">Address</label>
+          <input formControlName="address" type="text" class="form-control" id="address">
+          <div *ngFor="let validation of validation_messages.address">
+            <div class="error-message" style="color: red"
+                 *ngIf="formGroup.get('address').hasError(validation.type) && (formGroup.get('address').dirty || formGroup.get('address').touched)">
+              {{validation.message}}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="address">
+        <label>Customer type</label>
+        <select  class="form-control col-12" formControlName="customerType">
+          <option *ngFor="let customerType of customerTypeList" [value]="customerType.id"> {{customerType.name}} </option>
+        </select>
+      </div><br>
+      <div class="text-center ">
+        <button type="button" class="btn btn-outline-secondary" [routerLink]="['/customer']">Back</button>&nbsp;
+        <button type="submit" class="btn btn-outline-success" >Create</button>
+      </div>
+    </form>
+    <br>
+
+
+  </div>
+</div>

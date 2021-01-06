@@ -1,0 +1,78 @@
+{
+  "customer": [
+    {
+      "id": 1,
+      "name": "Bùi Phi Long",
+      "idCard": "197347541",
+      "dateOfBirth": "1995-04-01",
+      "phoneNumber": "0375120295",
+      "email": "long.01.04.1995@gmail.com",
+      "address": "Quảng Trị",
+      "customerType": {
+        "id": 1,
+        "name": "Diamond"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Nguyễn Thị Minh Thư",
+      "idCard": "123456789",
+      "dateOfBirth": "1998-10-16",
+      "phoneNumber": "0352978743",
+      "email": "nagisa.1.4@gmail.com",
+      "address": "Japan",
+      "customerType": {
+        "id": 1,
+        "name": "Diamond"
+      }
+    }
+  ],
+  "customerType": [
+    {
+      "id": 1,
+      "name": "Diamond"
+    },
+    {
+      "id": 2,
+      "name": "Platinum"
+    },
+    {
+      "id": 3,
+      "name": "Gold"
+    },
+    {
+      "id": 4,
+      "name": "Silver"
+    },
+    {
+      "id": 5,
+      "name": "Member"
+    }
+  ],
+  "employee": [
+    {
+      "id": 1,
+      "name": "Nguyễn Văn A",
+      "dateOfBirth": "1995-07-16",
+      "idCard": "123456789",
+      "phoneNumber": "0913456789",
+      "email": "maymaynhat@gmail.com",
+      "position": "Giám Sát",
+      "degree": "Đại Học",
+      "division": "Quản Lí",
+      "salary": "400000"
+    },
+    {
+      "id": 2,
+      "name": "Nguyễn Tùng Dương",
+      "dateOfBirth": "1995-07-31",
+      "idCard": "123456782",
+      "phoneNumber": "0913456789",
+      "email": "maymaynhat@gmail.com",
+      "position": "Chuyên Viên",
+      "degree": "Đại Học",
+      "division": "Tài Chính - Marketing",
+      "salary": "400000"
+    }
+  ]
+}

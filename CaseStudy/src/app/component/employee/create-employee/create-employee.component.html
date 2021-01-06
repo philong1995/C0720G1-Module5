@@ -1,0 +1,134 @@
+<div class="container-fluid">
+  <div class="container">
+    <h1 class="list-title">Add New Employee</h1>
+    <form [formGroup]="formCreate" (ngSubmit)="saveEmployee()">
+
+      <div class="row">
+        <div class="form-group col">
+          <label for="exampleInputEmail1">Name</label>
+          <input formControlName="name" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <div *ngFor="let validation of validation_messages.name">
+            <div class="error-message" style="color: red"
+                 *ngIf="formCreate.get('name').hasError(validation.type) && (formCreate.get('name').dirty || formCreate.get('name').touched)">
+              {{validation.message}}
+            </div>
+          </div>
+        </div>
+        <div class="form-group col">
+          <label for="exampleInputPassword2">Date of birth</label>
+          <input formControlName="dateOfBirth" type="date" class="form-control" id="exampleInputPassword2">
+          <div *ngFor="let validation of validation_messages.dateOfBirth">
+            <div class="error-message" style="color: red"
+                 *ngIf="formCreate.get('dateOfBirth').hasError(validation.type) && (formCreate.get('dateOfBirth').dirty || formCreate.get('dateOfBirth').touched)">
+              {{validation.message}}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="form-group col">
+          <label for="idCard">ID card</label>
+          <input formControlName="idCard" type="text" class="form-control" id="idCard">
+          <div *ngFor="let validation of validation_messages.idCard">
+            <div class="error-message" style="color: red"
+                 *ngIf="formCreate.get('idCard').hasError(validation.type) && (formCreate.get('idCard').dirty || formCreate.get('idCard').touched)">
+              {{validation.message}}
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group col">
+          <label for="phoneNumber">Phone number</label>
+          <input formControlName="phoneNumber" type="text" class="form-control" id="phoneNumber">
+          <div *ngFor="let validation of validation_messages.phoneNumber">
+            <div class="error-message" style="color: red"
+                 *ngIf="formCreate.get('phoneNumber').hasError(validation.type) && (formCreate.get('phoneNumber').dirty || formCreate.get('phoneNumber').touched)">
+              {{validation.message}}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="form-group col">
+          <label for="email">Email</label>
+          <input formControlName="email" type="email" class="form-control" id="email">
+          <div *ngFor="let validation of validation_messages.email">
+            <div class="error-message" style="color: red"
+                 *ngIf="formCreate.get('email').hasError(validation.type) && (formCreate.get('email').dirty || formCreate.get('email').touched)">
+              {{validation.message}}
+            </div>
+          </div>
+        </div>
+        <div class="form-group col">
+          <label for="salary">Salary</label>
+          <input formControlName="salary" type="text" class="form-control" id="salary">
+          <div *ngFor="let validation of validation_messages.salary">
+            <div class="error-message" style="color: red"
+                 *ngIf="formCreate.get('salary').hasError(validation.type) && (formCreate.get('salary').dirty || formCreate.get('salary').touched)">
+              {{validation.message}}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="form-group col">
+          <label for="position">Position</label>
+          <select  class="form-control" formControlName="position" id="position">
+            <option value="Lễ Tân"> Lễ Tân </option>
+            <option value="Phục Vụ"> Phục Vụ </option>
+            <option value="Chuyên Viên"> Chuyên Viên </option>
+            <option value="Giám Sát"> Giám Sát </option>
+            <option value="Quản Lí"> Quản Lí </option>
+            <option value="Giám Đốc"> Giám Đốc </option>
+          </select>
+          <div *ngFor="let validation of validation_messages.position">
+            <div class="error-message" style="color: red"
+                 *ngIf="formCreate.get('position').hasError(validation.type) && (formCreate.get('position').dirty || formCreate.get('position').touched)">
+              {{validation.message}}
+            </div>
+          </div>
+        </div>
+        <div class="form-group col">
+          <label for="division">Division</label>
+          <select  class="form-control" formControlName="division" id="division">
+            <option value="Tài Chính - Marketing">Tài Chính - Marketing</option>
+            <option value="Hành Chính">Hành Chính</option>
+            <option value="Phục Vụ">Phục Vụ</option>
+            <option value="Quản Lí">Quản Lí</option>
+          </select>
+          <div *ngFor="let validation of validation_messages.division">
+            <div class="error-message" style="color: red"
+                 *ngIf="formCreate.get('division').hasError(validation.type) && (formCreate.get('division').dirty || formCreate.get('division').touched)">
+              {{validation.message}}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <label for="degree">Education Degree</label>
+        <select  class="form-control col-12" formControlName="degree" id="degree">
+          <option value="Sau Đại Học">Sau Đại Học</option>
+          <option value="Đại Học">Đại Học</option>
+          <option value="Cao Đẳng">Cao Đẳng</option>
+          <option value="Trung Cấp">Trung Cấp</option>
+        </select>
+        <div *ngFor="let validation of validation_messages.degree">
+          <div class="error-message" style="color: red"
+               *ngIf="formCreate.get('degree').hasError(validation.type) && (formCreate.get('degree').dirty || formCreate.get('degree').touched)">
+            {{validation.message}}
+          </div>
+        </div>
+      </div><br>
+
+      <div class="text-center ">
+        <button type="button" class="btn btn-outline-secondary" [routerLink]="['/employee']">Back</button>&nbsp;
+        <button type="submit" class="btn btn-outline-success" >Add</button>
+      </div>
+    </form>
+    <br>
+  </div>
+</div>

@@ -94,15 +94,4 @@ export class CreateCustomerComponent implements OnInit {
       });
     }
   }
-
-    // for (const e of this.customerTypeList) {
-    //   if (e.id == this.formGroup.value.customerType) {
-    //     this.formGroup.value.customerType = e;
-    //     break;
-    //   }
-    // }
-    //
-    // this.customerService.create(this.formGroup.value).subscribe(data =>{
-    // });
-    // this.router.navigateByUrl('customer').then(e => alert('Add new customer successfully'));
 }

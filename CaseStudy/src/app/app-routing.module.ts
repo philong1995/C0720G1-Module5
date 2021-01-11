@@ -9,6 +9,9 @@ import {ListEmployeeComponent} from './component/employee/list-employee/list-emp
 import {CreateEmployeeComponent} from './component/employee/create-employee/create-employee.component';
 import {ViewEmployeeComponent} from './component/employee/view-employee/view-employee.component';
 import {EditEmployeeComponent} from './component/employee/edit-employee/edit-employee.component';
+import {ListServiceComponent} from './component/service/list-service/list-service.component';
+import {ListContractComponent} from './component/contract/list-contract/list-contract.component';
+import {CreateContractComponent} from './component/contract/create-contract/create-contract.component';
 
 
 const routes: Routes = [
@@ -47,6 +50,18 @@ const routes: Routes = [
   {
     path: 'employee/edit/:id',
     component: EditEmployeeComponent
+  },
+  {
+    path: 'service',
+    component: ListServiceComponent
+  },
+  {
+    path: 'contract',
+    component: ListContractComponent
+  },
+  {
+    path: 'contract/create',
+    component: CreateContractComponent
   }
 ];
 

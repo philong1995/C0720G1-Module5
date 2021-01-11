@@ -7,7 +7,7 @@ import { ListCustomerComponent } from './component/customer/list-customer/list-c
 import { HomeComponent } from './component/home/home.component';
 import {HttpClientModule} from '@angular/common/http';
 import { CreateCustomerComponent } from './component/customer/create-customer/create-customer.component';
-import {ReactiveFormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { CustomerTypeComponent } from './component/customer/customer-type/customer-type.component';
 import { EditCustomerComponent } from './component/customer/edit-customer/edit-customer.component';
 import { ViewCustomerComponent } from './component/customer/view-customer/view-customer.component';
@@ -15,6 +15,11 @@ import { ListEmployeeComponent } from './component/employee/list-employee/list-e
 import { CreateEmployeeComponent } from './component/employee/create-employee/create-employee.component';
 import { EditEmployeeComponent } from './component/employee/edit-employee/edit-employee.component';
 import { ViewEmployeeComponent } from './component/employee/view-employee/view-employee.component';
+import { ListServiceComponent } from './component/service/list-service/list-service.component';
+import { ListContractComponent } from './component/contract/list-contract/list-contract.component';
+import { CreateContractComponent } from './component/contract/create-contract/create-contract.component';
+import {NgxPaginationModule} from 'ngx-pagination';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 @NgModule({
   declarations: [
@@ -29,12 +34,18 @@ import { ViewEmployeeComponent } from './component/employee/view-employee/view-e
     CreateEmployeeComponent,
     EditEmployeeComponent,
     ViewEmployeeComponent,
+    ListServiceComponent,
+    ListContractComponent,
+    CreateContractComponent,
   ],
   imports: [
     BrowserModule,
+    Ng2SearchPipeModule,
     HttpClientModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    NgxPaginationModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

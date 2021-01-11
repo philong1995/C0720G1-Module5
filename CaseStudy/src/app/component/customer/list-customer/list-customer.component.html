@@ -1,4 +1,4 @@
-<h1 class="text-center mt-2 ">List Customer</h1>
+<h1 class="list-title " style="color: whitesmoke">List Customer</h1>
 
 <div class="navbar navbar-light bg-light justify-content-between">
   <a class="btn btn-outline-success" routerLink="create">+ Create Customer</a>
@@ -10,8 +10,8 @@
 
 <table class="table table-striped">
   <thead>
-  <tr>
-    <th scope="col">ID</th>
+  <tr style="color: whitesmoke">
+    <th scope="col" >ID</th>
     <th scope="col">Name</th>
     <th scope="col">ID Card</th>
     <th scope="col">Email</th>
@@ -20,14 +20,14 @@
   </tr>
   </thead>
   <tbody>
-  <tr *ngFor="let cus of customerList">
+  <tr *ngFor="let cus of customerList | paginate: { itemsPerPage: 4, currentPage: p }" style="color: whitesmoke">
     <td>{{cus.id}}</td>
-    <td><a [routerLink]="['view',cus.id]">{{cus.name}}</a></td>
+    <td><a style="color: red" [routerLink]="['view',cus.id]">{{cus.name}}</a></td>
     <td>{{cus.idCard}}</td>
-    <td>{{cus.email}}</td>
-    <td>{{cus.customerType.name}}</td>
+    <td style="color: whitesmoke">{{cus.email}}</td>
+    <td style="color: whitesmoke">{{cus.customerType.name}}</td>
     <td>
-      <a class="btn btn-outline-primary" style="text-decoration: none;margin-right: 3px" [routerLink]="['edit',cus.id]"><i class="fas fa-user-edit"></i></a>
+      <a class="btn btn-outline-light" style="text-decoration: none;margin-right: 3px" [routerLink]="['edit',cus.id]"><i class="fas fa-user-edit"></i></a>
       <button class="btn btn-outline-danger" data-toggle="modal" data-target="#modalDelete" (click)="getId(cus.id)">
         <i class="fas fa-trash-alt"></i>
       </button>
@@ -35,6 +35,7 @@
   </tr>
   </tbody>
 </table>
+<pagination-controls (pageChange)="p = $event"></pagination-controls>
 
 <div class="modal fade" id="modalDelete" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog" role="document">

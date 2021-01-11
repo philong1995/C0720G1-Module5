@@ -1,0 +1,113 @@
+<div class="container-fluid">
+  <div class="container">
+    <h1 class="list-title">Edit Book</h1>
+    <form [formGroup]="editForm" (ngSubmit)="update()">
+      <div class="row">
+        <div class="form-group col">
+          <label>ID Customer</label>
+          <input [value]="customerId" type="text" class="form-control" readonly>
+        </div>
+        <div class="form-group col">
+          <label>ID Book</label>
+          <input formControlName="id" type="text" class="form-control" readonly>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="form-group col">
+          <label>Name Customer</label>
+          <select  class="form-control col-12" formControlName="customer">
+            <option *ngFor="let cus of customerList" [value]="cus.id" [selected]="customerId === cus.id"> {{cus.name}}</option>
+          </select>
+          <div *ngFor="let validation of validation_messages.customer">
+            <div class="error-message" style="color: red"
+                 *ngIf="editForm.get('customer').hasError(validation.type) && (editForm.get('customer').dirty || editForm.get('customer').touched)">
+              {{validation.message}}
+            </div>
+          </div>
+        </div>
+        <div class="form-group col">
+          <label for="exampleInputPassword2">Exp</label>
+          <select  class="form-control col-12" formControlName="exp" id="exampleInputPassword2">
+            <option value="3 Tháng">3 Tháng</option>
+            <option value="6 Tháng">6 Tháng</option>
+            <option value="1 Năm">1 Năm</option>
+            <option value="5 Năm">5 Năm</option>
+            <option value="Không Kì Hạn">Không Kì Hạn</option>
+          </select>
+          <div *ngFor="let validation of validation_messages.exp">
+            <div class="error-message" style="color: red"
+                 *ngIf="editForm.get('exp').hasError(validation.type) && (editForm.get('exp').dirty || editForm.get('exp').touched)">
+              {{validation.message}}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="form-group col">
+          <label for="idCard">Start Date</label>
+          <input formControlName="startDate" type="date" class="form-control" id="idCard" >
+          <div *ngFor="let validation of validation_messages.startDate">
+            <div class="error-message" style="color: red"
+                 *ngIf="editForm.get('startDate').hasError(validation.type) && (editForm.get('startDate').dirty || editForm.get('startDate').touched)">
+              {{validation.message}}
+            </div>
+          </div>
+        </div>
+        <div class="form-group col">
+          <label for="phoneNumber">Start Time</label>
+          <input formControlName="startTime" type="date" class="form-control" id="phoneNumber" >
+          <div *ngFor="let validation of validation_messages.startTime">
+            <div class="error-message" style="color: red"
+                 *ngIf="editForm.get('startTime').hasError(validation.type) && (editForm.get('startTime').dirty || editForm.get('startTime').touched)">
+              {{validation.message}}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group col">
+          <label for="email">Money</label>
+          <input
+            formControlName="money" type="text" class="form-control" id="email" >
+          <div *ngFor="let validation of validation_messages.money">
+            <div class="error-message" style="color: red"
+                 *ngIf="editForm.get('money').hasError(validation.type) && (editForm.get('money').dirty || editForm.get('money').touched)">
+              {{validation.message}}
+            </div>
+          </div>
+        </div>
+        <div class="form-group col">
+          <label for="email">xMoney</label>
+          <input formControlName="xMoney" type="text" class="form-control" id="address" >
+          <div *ngFor="let validation of validation_messages.xMoney">
+            <div class="error-message" style="color: red"
+                 *ngIf="editForm.get('xMoney').hasError(validation.type) && (editForm.get('xMoney').dirty || editForm.get('xMoney').touched)">
+              {{validation.message}}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <label for="degree">Bonus</label>
+        <input formControlName="bonus" type="text" class="form-control" id="degree" >
+        <div *ngFor="let validation of validation_messages.bonus">
+          <div class="error-message" style="color: red"
+               *ngIf="editForm.get('bonus').hasError(validation.type) && (editForm.get('bonus').dirty || editForm.get('bonus').touched)">
+            {{validation.message}}
+          </div>
+        </div>
+      </div>
+
+      <br>
+      <div class="text-center">
+        <button type="button" class="btn btn-outline-secondary" routerLink="/book">Back</button> &nbsp;
+        <button type="submit" class="btn btn-outline-success" >Save</button>
+      </div>
+    </form>
+
+
+  </div>
+</div>

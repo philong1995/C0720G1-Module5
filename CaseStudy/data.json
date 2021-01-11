@@ -3,8 +3,8 @@
     {
       "id": 1,
       "name": "Bùi Phi Long",
-      "idCard": "197347541",
       "dateOfBirth": "1995-04-01",
+      "idCard": "197347541",
       "phoneNumber": "0375120295",
       "email": "long.01.04.1995@gmail.com",
       "address": "Quảng Trị",
@@ -16,11 +16,50 @@
     {
       "id": 2,
       "name": "Nguyễn Thị Minh Thư",
-      "idCard": "123456789",
       "dateOfBirth": "1998-10-16",
-      "phoneNumber": "0352978743",
+      "idCard": "123456789",
+      "phoneNumber": "0915120295",
       "email": "nagisa.1.4@gmail.com",
       "address": "Japan",
+      "customerType": {
+        "id": 1,
+        "name": "Diamond"
+      }
+    },
+    {
+      "id": 3,
+      "name": "Bùi Phi Long 1",
+      "dateOfBirth": "1995-04-01",
+      "idCard": "197347541",
+      "phoneNumber": "0375120295",
+      "email": "long.01.04.1995@gmail.com",
+      "address": "Quảng Trị",
+      "customerType": {
+        "id": 1,
+        "name": "Diamond"
+      }
+    },
+    {
+      "id": 4,
+      "name": "Bùi Phi Long 2",
+      "dateOfBirth": "1995-04-01",
+      "idCard": "197347541",
+      "phoneNumber": "0375120295",
+      "email": "long.01.04.1995@gmail.com",
+      "address": "Quảng Trị",
+      "customerType": {
+        "id": 1,
+        "name": "Diamond"
+      }
+    },
+    {
+      "id": 5,
+      "name": "Bùi Phi Long 3",
+      "dateOfBirth": "1995-04-01",
+      "idCard": "197347541",
+      "phoneNumber": "0375120295",
+      "email": "long.01.04.1995@gmail.com",
+      "address": "Quảng Trị",
       "customerType": {
         "id": 1,
         "name": "Diamond"
@@ -53,14 +92,14 @@
     {
       "id": 1,
       "name": "Nguyễn Văn A",
-      "dateOfBirth": "1995-07-16",
       "idCard": "123456789",
+      "dateOfBirth": "1995-07-16",
       "phoneNumber": "0913456789",
-      "email": "maymaynhat@gmail.com",
+      "email": "xuixeonhat@gmail.com",
       "position": "Giám Sát",
-      "degree": "Đại Học",
       "division": "Quản Lí",
-      "salary": "400000"
+      "salary": "400000",
+      "degree": "Đại Học"
     },
     {
       "id": 2,
@@ -73,6 +112,544 @@
       "degree": "Đại Học",
       "division": "Tài Chính - Marketing",
       "salary": "400000"
+    }
+  ],
+  "service": [
+    {
+      "id": 1,
+      "name": "Villa Vip Pro Max",
+      "area": 1000,
+      "cost": 500,
+      "description": "None",
+      "amountPeople": 10,
+      "numberOfFloor": 3,
+      "poolArea": 50,
+      "rentType": {
+        "id": 2,
+        "name": "Day"
+      },
+      "serviceType": {
+        "id": 3,
+        "name": "Villa"
+      }
+    },
+    {
+      "id": 2,
+      "name": "House Vip Pro Max",
+      "area": 1000,
+      "cost": 500,
+      "description": "None",
+      "amountPeople": 10,
+      "numberOfFloor": 3,
+      "poolArea": 50,
+      "rentType": {
+        "id": 3,
+        "name": "Week"
+      },
+      "serviceType": {
+        "id": 2,
+        "name": "House"
+      }
+    },
+    {
+      "id": 3,
+      "name": "House Vip Pro Max",
+      "area": 1000,
+      "cost": 500,
+      "description": "None",
+      "amountPeople": 10,
+      "numberOfFloor": 3,
+      "poolArea": 50,
+      "rentType": {
+        "id": 2,
+        "name": "Month"
+      },
+      "serviceType": {
+        "id": 1,
+        "name": "House"
+      }
+    }
+  ],
+  "rentType": [
+    {
+      "id": 1,
+      "name": "Hour"
+    },
+    {
+      "id": 2,
+      "name": "Day"
+    },
+    {
+      "id": 3,
+      "name": "Week"
+    },
+    {
+      "id": 4,
+      "name": "Month"
+    },
+    {
+      "id": 5,
+      "name": "Year"
+    }
+  ],
+  "serviceType": [
+    {
+      "id": 1,
+      "name": "Room"
+    },
+    {
+      "id": 2,
+      "name": "House"
+    },
+    {
+      "id": 3,
+      "name": "Villa"
+    }
+  ],
+  "attachService": [
+    {
+      "id": 1,
+      "name": "Massage",
+      "cost": 100,
+      "amount": 50
+    },
+    {
+      "id": 2,
+      "name": "Karaoke",
+      "cost": 200,
+      "amount": 40
+    },
+    {
+      "id": 3,
+      "name": "Drink",
+      "cost": 300,
+      "amount": 30
+    },
+    {
+      "id": 4,
+      "name": "Food",
+      "cost": 400,
+      "amount": 20
+    },
+    {
+      "id": 5,
+      "name": "Car",
+      "cost": 500,
+      "amount": 10
+    }
+  ],
+  "contract": [
+    {
+      "id": 1,
+      "startDay": "2021-02-07",
+      "endDay": "2021-02-09",
+      "deposit": 0,
+      "totalMoney": 1000,
+      "employee": {
+        "id": 1,
+        "name": "Nguyễn Văn A",
+        "idCard": "123456789",
+        "dateOfBirth": "1995-07-16",
+        "phoneNumber": "0913456789",
+        "email": "xuixeonhat@gmail.com",
+        "position": "Giám Sát",
+        "division": "Quản Lí",
+        "salary": "400000",
+        "degree": "Đại Học"
+      },
+      "customer": {
+        "id": 1,
+        "name": "Bùi Phi Long",
+        "dateOfBirth": "1995-04-01",
+        "idCard": "197347541",
+        "phoneNumber": "0375120295",
+        "email": "long.01.04.1995@gmail.com",
+        "address": "Quảng Trị",
+        "customerType": {
+          "id": 1,
+          "name": "Diamond"
+        }
+      },
+      "service": {
+        "id": 1,
+        "name": "Villa Vip Pro Max",
+        "area": 1000,
+        "cost": 500,
+        "description": "None",
+        "amountPeople": 10,
+        "numberOfFloor": 3,
+        "poolArea": 50,
+        "rentType": {
+          "id": 2,
+          "name": "Day"
+        },
+        "serviceType": {
+          "id": 3,
+          "name": "Villa"
+        }
+      }
+    }
+  ],
+  "contractDetail": [
+    {
+      "id": 1,
+      "attachService": {
+        "id": 1,
+        "name": "Massage",
+        "cost": 100,
+        "amount": 50
+      },
+      "amount": 1,
+      "contract": {
+        "id": 1,
+        "startDay": "2021-02-07",
+        "endDay": "2021-02-09",
+        "deposit": 0,
+        "totalMoney": 1000,
+        "employee": {
+          "id": 1,
+          "name": "Nguyễn Văn A",
+          "idCard": "123456789",
+          "dateOfBirth": "1995-07-16",
+          "phoneNumber": "0913456789",
+          "email": "xuixeonhat@gmail.com",
+          "position": "Giám Sát",
+          "division": "Quản Lí",
+          "salary": "400000",
+          "degree": "Đại Học"
+        },
+        "customer": {
+          "id": 1,
+          "name": "Bùi Phi Long",
+          "dateOfBirth": "1995-04-01",
+          "idCard": "197347541",
+          "phoneNumber": "0375120295",
+          "email": "long.01.04.1995@gmail.com",
+          "address": "Quảng Trị",
+          "customerType": {
+            "id": 1,
+            "name": "Diamond"
+          }
+        },
+        "service": {
+          "id": 1,
+          "name": "Villa Vip Pro Max",
+          "area": 1000,
+          "cost": 500,
+          "description": "None",
+          "amountPeople": 10,
+          "numberOfFloor": 3,
+          "poolArea": 50,
+          "rentType": {
+            "id": 2,
+            "name": "Day"
+          },
+          "serviceType": {
+            "id": 3,
+            "name": "Villa"
+          }
+        }
+      }
+    },
+    {
+      "attachService": {
+        "id": 1,
+        "name": "Massage",
+        "cost": 100,
+        "amount": "1"
+      },
+      "amount": "1",
+      "contract": {
+        "customer": {
+          "id": 1,
+          "name": "Bùi Phi Long",
+          "dateOfBirth": "1995-04-01",
+          "idCard": "197347541",
+          "phoneNumber": "0375120295",
+          "email": "long.01.04.1995@gmail.com",
+          "address": "Quảng Trị",
+          "customerType": {
+            "id": 1,
+            "name": "Diamond"
+          }
+        },
+        "employee": {
+          "id": 1,
+          "name": "Nguyễn Văn A",
+          "idCard": "123456789",
+          "dateOfBirth": "1995-07-16",
+          "phoneNumber": "0913456789",
+          "email": "xuixeonhat@gmail.com",
+          "position": "Giám Sát",
+          "division": "Quản Lí",
+          "salary": "400000",
+          "degree": "Đại Học"
+        },
+        "service": {
+          "id": 1,
+          "name": "Villa Vip Pro Max",
+          "area": 1000,
+          "cost": 500,
+          "description": "None",
+          "amountPeople": 10,
+          "numberOfFloor": 3,
+          "poolArea": 50,
+          "rentType": {
+            "id": 2,
+            "name": "Day"
+          },
+          "serviceType": {
+            "id": 3,
+            "name": "Villa"
+          }
+        },
+        "startDay": "2021-01-09",
+        "endDay": "2021-01-15",
+        "deposit": "10",
+        "totalMoney": 4500,
+        "id": 2
+      },
+      "id": 2
+    },
+    {
+      "attachService": {
+        "id": 3,
+        "name": "Drink",
+        "cost": 300,
+        "amount": "1"
+      },
+      "amount": "1",
+      "contract": {
+        "customer": {
+          "id": 1,
+          "name": "Bùi Phi Long",
+          "dateOfBirth": "1995-04-01",
+          "idCard": "197347541",
+          "phoneNumber": "0375120295",
+          "email": "long.01.04.1995@gmail.com",
+          "address": "Quảng Trị",
+          "customerType": {
+            "id": 1,
+            "name": "Diamond"
+          }
+        },
+        "employee": {
+          "id": 1,
+          "name": "Nguyễn Văn A",
+          "idCard": "123456789",
+          "dateOfBirth": "1995-07-16",
+          "phoneNumber": "0913456789",
+          "email": "xuixeonhat@gmail.com",
+          "position": "Giám Sát",
+          "division": "Quản Lí",
+          "salary": "400000",
+          "degree": "Đại Học"
+        },
+        "service": {
+          "id": 1,
+          "name": "Villa Vip Pro Max",
+          "area": 1000,
+          "cost": 500,
+          "description": "None",
+          "amountPeople": 10,
+          "numberOfFloor": 3,
+          "poolArea": 50,
+          "rentType": {
+            "id": 2,
+            "name": "Day"
+          },
+          "serviceType": {
+            "id": 3,
+            "name": "Villa"
+          }
+        },
+        "startDay": "2021-01-09",
+        "endDay": "2021-01-15",
+        "deposit": "10",
+        "totalMoney": 4500,
+        "id": 2
+      },
+      "id": 3
+    },
+    {
+      "attachService": {
+        "id": 4,
+        "name": "Food",
+        "cost": 400,
+        "amount": "1"
+      },
+      "amount": "1",
+      "contract": {
+        "customer": {
+          "id": 1,
+          "name": "Bùi Phi Long",
+          "dateOfBirth": "1995-04-01",
+          "idCard": "197347541",
+          "phoneNumber": "0375120295",
+          "email": "long.01.04.1995@gmail.com",
+          "address": "Quảng Trị",
+          "customerType": {
+            "id": 1,
+            "name": "Diamond"
+          }
+        },
+        "employee": {
+          "id": 1,
+          "name": "Nguyễn Văn A",
+          "idCard": "123456789",
+          "dateOfBirth": "1995-07-16",
+          "phoneNumber": "0913456789",
+          "email": "xuixeonhat@gmail.com",
+          "position": "Giám Sát",
+          "division": "Quản Lí",
+          "salary": "400000",
+          "degree": "Đại Học"
+        },
+        "service": {
+          "id": 1,
+          "name": "Villa Vip Pro Max",
+          "area": 1000,
+          "cost": 500,
+          "description": "None",
+          "amountPeople": 10,
+          "numberOfFloor": 3,
+          "poolArea": 50,
+          "rentType": {
+            "id": 2,
+            "name": "Day"
+          },
+          "serviceType": {
+            "id": 3,
+            "name": "Villa"
+          }
+        },
+        "startDay": "2021-01-09",
+        "endDay": "2021-01-15",
+        "deposit": "10",
+        "totalMoney": 4500,
+        "id": 2
+      },
+      "id": 4
+    },
+    {
+      "attachService": {
+        "id": 5,
+        "name": "Car",
+        "cost": 500,
+        "amount": "1"
+      },
+      "amount": "1",
+      "contract": {
+        "customer": {
+          "id": 1,
+          "name": "Bùi Phi Long",
+          "dateOfBirth": "1995-04-01",
+          "idCard": "197347541",
+          "phoneNumber": "0375120295",
+          "email": "long.01.04.1995@gmail.com",
+          "address": "Quảng Trị",
+          "customerType": {
+            "id": 1,
+            "name": "Diamond"
+          }
+        },
+        "employee": {
+          "id": 1,
+          "name": "Nguyễn Văn A",
+          "idCard": "123456789",
+          "dateOfBirth": "1995-07-16",
+          "phoneNumber": "0913456789",
+          "email": "xuixeonhat@gmail.com",
+          "position": "Giám Sát",
+          "division": "Quản Lí",
+          "salary": "400000",
+          "degree": "Đại Học"
+        },
+        "service": {
+          "id": 1,
+          "name": "Villa Vip Pro Max",
+          "area": 1000,
+          "cost": 500,
+          "description": "None",
+          "amountPeople": 10,
+          "numberOfFloor": 3,
+          "poolArea": 50,
+          "rentType": {
+            "id": 2,
+            "name": "Day"
+          },
+          "serviceType": {
+            "id": 3,
+            "name": "Villa"
+          }
+        },
+        "startDay": "2021-01-09",
+        "endDay": "2021-01-15",
+        "deposit": "10",
+        "totalMoney": 4500,
+        "id": 2
+      },
+      "id": 5
+    },
+    {
+      "attachService": {
+        "id": 2,
+        "name": "Karaoke",
+        "cost": 200,
+        "amount": "1"
+      },
+      "amount": "1",
+      "contract": {
+        "customer": {
+          "id": 1,
+          "name": "Bùi Phi Long",
+          "dateOfBirth": "1995-04-01",
+          "idCard": "197347541",
+          "phoneNumber": "0375120295",
+          "email": "long.01.04.1995@gmail.com",
+          "address": "Quảng Trị",
+          "customerType": {
+            "id": 1,
+            "name": "Diamond"
+          }
+        },
+        "employee": {
+          "id": 1,
+          "name": "Nguyễn Văn A",
+          "idCard": "123456789",
+          "dateOfBirth": "1995-07-16",
+          "phoneNumber": "0913456789",
+          "email": "xuixeonhat@gmail.com",
+          "position": "Giám Sát",
+          "division": "Quản Lí",
+          "salary": "400000",
+          "degree": "Đại Học"
+        },
+        "service": {
+          "id": 1,
+          "name": "Villa Vip Pro Max",
+          "area": 1000,
+          "cost": 500,
+          "description": "None",
+          "amountPeople": 10,
+          "numberOfFloor": 3,
+          "poolArea": 50,
+          "rentType": {
+            "id": 2,
+            "name": "Day"
+          },
+          "serviceType": {
+            "id": 3,
+            "name": "Villa"
+          }
+        },
+        "startDay": "2021-01-09",
+        "endDay": "2021-01-15",
+        "deposit": "10",
+        "totalMoney": 4500,
+        "id": 2
+      },
+      "id": 6
     }
   ]
 }

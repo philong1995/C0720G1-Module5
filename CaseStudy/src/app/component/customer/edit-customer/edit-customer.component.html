@@ -1,47 +1,72 @@
-<div class="container-fluid">
+<div class="container-fluid" style="color: whitesmoke">
   <div class="container">
     <h1 class="list-title">Edit Customer</h1>
     <form [formGroup]="editForm" (ngSubmit)="update()">
       <div class="row">
         <div class="form-group col">
           <label for="exampleInputEmail1">Name</label>
-          <input
-            formControlName="name"
-            type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" >
+          <input formControlName="name" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" >
+          <div *ngFor="let validation of validation_messages.name">
+            <div class="error-message" style="color: red"
+                 *ngIf="editForm.get('name').hasError(validation.type) && (editForm.get('name').dirty || editForm.get('name').touched)">
+              {{validation.message}}
+            </div>
+          </div>
         </div>
         <div class="form-group col">
           <label for="exampleInputPassword2">Date of birth</label>
-          <input
-            formControlName="dateOfBirth"
-            type="date" class="form-control" id="exampleInputPassword2" >
+          <input formControlName="dateOfBirth" type="date" class="form-control" id="exampleInputPassword2" >
+          <div *ngFor="let validation of validation_messages.dateOfBirth">
+            <div class="error-message" style="color: red"
+                 *ngIf="editForm.get('dateOfBirth').hasError(validation.type) && (editForm.get('dateOfBirth').dirty || editForm.get('dateOfBirth').touched)">
+              {{validation.message}}
+            </div>
+          </div>
         </div>
       </div>
 
       <div class="row">
         <div class="form-group col">
           <label for="idCard">Id card</label>
-          <input
-            formControlName="idCard"
-            type="text" class="form-control" id="idCard" >
+          <input formControlName="idCard" type="text" class="form-control" id="idCard" >
+          <div *ngFor="let validation of validation_messages.idCard">
+            <div class="error-message" style="color: red"
+                 *ngIf="editForm.get('idCard').hasError(validation.type) && (editForm.get('idCard').dirty || editForm.get('idCard').touched)">
+              {{validation.message}}
+            </div>
+          </div>
         </div>
         <div class="form-group col">
           <label for="phoneNumber">Phone number</label>
-          <input
-            formControlName="phoneNumber"
-            type="text" class="form-control" id="phoneNumber" >
+          <input formControlName="phoneNumber" type="text" class="form-control" id="phoneNumber" >
+          <div *ngFor="let validation of validation_messages.phoneNumber">
+            <div class="error-message" style="color: red"
+                 *ngIf="editForm.get('phoneNumber').hasError(validation.type) && (editForm.get('phoneNumber').dirty || editForm.get('phoneNumber').touched)">
+              {{validation.message}}
+            </div>
+          </div>
         </div>
       </div>
       <div class="row">
         <div class="form-group col">
           <label for="email">Email</label>
-          <input
-            formControlName="email" type="text" class="form-control" id="email" >
+          <input formControlName="email" type="text" class="form-control" id="email" >
+          <div *ngFor="let validation of validation_messages.email">
+            <div class="error-message" style="color: red"
+                 *ngIf="editForm.get('email').hasError(validation.type) && (editForm.get('email').dirty || editForm.get('email').touched)">
+              {{validation.message}}
+            </div>
+          </div>
         </div>
         <div class="form-group col">
           <label for="email">Address</label>
-          <input
-            formControlName="address"
-            type="text" class="form-control" id="address" >
+          <input formControlName="address" type="text" class="form-control" id="address" >
+          <div *ngFor="let validation of validation_messages.address">
+            <div class="error-message" style="color: red"
+                 *ngIf="editForm.get('address').hasError(validation.type) && (editForm.get('address').dirty || editForm.get('address').touched)">
+              {{validation.message}}
+            </div>
+          </div>
         </div>
       </div>
       <div class="form-group">
@@ -49,6 +74,12 @@
         <select  class="form-control col-12" id="customerType" formControlName="customerType">
           <option *ngFor="let customerType of customerTypeList" [value]="customerType.id" [selected]="customerTypeId === customerType.id"> {{customerType.name}}</option>
         </select>
+        <div *ngFor="let validation of validation_messages.customerType">
+          <div class="error-message" style="color: red"
+               *ngIf="editForm.get('customerType').hasError(validation.type) && (editForm.get('customerType').dirty || editForm.get('customerType').touched)">
+            {{validation.message}}
+          </div>
+        </div>
       </div>
       <br>
       <div class="text-center">
@@ -56,7 +87,5 @@
         <button type="submit" class="btn btn-outline-success" >Save</button>
       </div>
     </form>
-
-
   </div>
 </div>

@@ -13,6 +13,7 @@ export class ListEmployeeComponent implements OnInit {
   employeeList: IEmployee[];
   employeeID: number;
   employee: string;
+  term:any;
 
   constructor(private employeeService: EmployeeService) { }
 
@@ -31,11 +32,4 @@ export class ListEmployeeComponent implements OnInit {
       this.ngOnInit();
     });
   }
-
-  search (keyword: string)  {
-    this.employeeService.searchAll(keyword.toString()).subscribe((data: IEmployee[]) =>{
-      this.employeeList = data;
-    });
-  }
-
 }

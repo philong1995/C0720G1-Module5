@@ -1,0 +1,42 @@
+<h1 class="text-center mt-3 mb-4" style="color: whitesmoke">List Service</h1>
+
+<div class="navbar navbar-light bg-light justify-content-between">
+  <a class="btn btn-outline-success" routerLink="create">+ Add new Service</a>
+  <div class="form-inline">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" ><i class="fas fa-search"></i></button>
+  </div>
+</div>
+
+<div class="container" style="color: whitesmoke">
+  <table class="table table-hover mt-4">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Area</th>
+      <th>Cost</th>
+      <th>Rent Type</th>
+      <th>Type Service</th>
+      <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let service of serviceList">
+      <td> {{service.id}} </td>
+      <td> {{service.name}} </td>
+      <td> {{service.area}} </td>
+      <td> {{service.cost}} </td>
+      <td> {{service.rentType.name}} </td>
+      <td> {{service.serviceType.name}} </td>
+      <td>
+        <a class="btn btn-outline-secondary" style="text-decoration: none;margin-right: 3px" [routerLink]="['view',service.id]"><i class="far fa-eye"></i></a>
+        <a class="btn btn-outline-primary" style="text-decoration: none;margin-right: 3px" [routerLink]="['edit',service.id]"><i class="fas fa-user-edit"></i></a>
+        <button class="btn btn-outline-danger" data-toggle="modal" data-target="#modalDelete">
+          <i class="fas fa-trash-alt"></i>
+        </button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>

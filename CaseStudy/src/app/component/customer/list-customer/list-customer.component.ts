@@ -12,7 +12,7 @@ export class ListCustomerComponent implements OnInit {
   customerList: ICustomer[];
   customerID: number;
   customer: string;
-
+  p: any;
   constructor(
     private customerService: CustomerService,
   ) { }

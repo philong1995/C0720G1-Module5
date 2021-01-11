@@ -1,0 +1,57 @@
+{
+  "customer": [
+    {
+      "id": 1,
+      "name": "Trương Tấn Hải"
+    },
+    {
+      "id": 2,
+      "name": "Đoàn Phước Trung"
+    },
+    {
+      "id": 3,
+      "name": "Bùi Phi Long"
+    }
+  ],
+  "book": [
+    {
+      "id": 1,
+      "startDate": "2021-01-09",
+      "startTime": "2021-01-10",
+      "exp": "6 Tháng",
+      "money": "200000000",
+      "xMoney": "8%/year",
+      "bonus": "Rain Cloth",
+      "customer": {
+        "id": 1,
+        "name": "Trương Tấn Hải"
+      }
+    },
+    {
+      "id": 2,
+      "startDate": "2021-01-09",
+      "startTime": "2021-01-10",
+      "exp": "6 Tháng",
+      "money": "200000000",
+      "xMoney": "8%/year",
+      "bonus": "Rain Cloth",
+      "customer": {
+        "id": 2,
+        "name": "Đoàn Phước Trung"
+      }
+    },
+    {
+      "id": 3,
+      "startDate": "2021-01-08",
+      "startTime": "2021-01-09",
+      "exp": "5 Năm",
+      "money": "200000000",
+      "xMoney": "8%/year",
+      "bonus": "Rain Cloth",
+      "customer": {
+        "id": 3,
+        "name": "Bùi Phi Long"
+      }
+    }
+  ]
+}

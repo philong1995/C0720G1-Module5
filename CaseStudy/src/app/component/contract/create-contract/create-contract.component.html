@@ -1,0 +1,96 @@
+<div class="container" style="color: whitesmoke">
+  <h1 class="text-center mt-3">Add new Contract</h1>
+  <form [formGroup]="createFormContract" (ngSubmit)="create()">
+    <div class="mx-5 row">
+      <div class="col-6">
+        <div>
+          <label class="col-form-label">Customer<span class="text-danger">*</span></label>
+          <select
+            [class]="createFormContract.get('customer').invalid && createFormContract.get('customer').touched ? 'border-danger' : ''"
+            formControlName="customer" class="form-control">
+            <option value="">Customer</option>
+            <option *ngFor="let customer of customerList" [value]="customer.id"> {{customer.name}} </option>
+          </select>
+        </div>
+        <p class="text-danger errors"
+           *ngIf="createFormContract.get('customer').hasError('required') && createFormContract.get('customer').touched">
+          Please enter a customer</p>
+        <div>
+          <label class="col-form-label">Employee</label>
+          <select
+            [class]="createFormContract.get('employee').invalid && createFormContract.get('employee').touched ? 'border-danger' : ''"
+            formControlName="employee" class="form-control">
+            <option value="">Employee</option>
+            <option *ngFor="let employee of employeeList" [value]="employee.id"> {{employee.name}} </option>
+          </select>
+        </div>
+        <p class="text-danger errors"
+           *ngIf="createFormContract.get('employee').hasError('required') && createFormContract.get('employee').touched">
+          Please enter a employee</p>
+        <div>
+          <label class="col-form-label">Service<span class="text-danger">*</span></label>
+          <select
+            [class]="createFormContract.get('service').invalid && (createFormContract.get('service').touched || createFormContract.get('startDay').touched || createFormContract.get('endDay').touched ) ? 'border-danger' : ''"
+            (change)="moneyByService()" formControlName="service" class="form-control">
+            <option value="">Service</option>
+            <option *ngFor="let service of serviceList" [value]="service.id"> {{service.name}} </option>
+          </select>
+        </div>
+        <p class="text-danger errors"
+           *ngIf="createFormContract.get('service').hasError('required') && (createFormContract.get('service').touched || createFormContract.get('startDay').touched || createFormContract.get('endDay').touched)">
+          Please enter a service</p>
+      </div>
+      <div class="col-6">
+        <div class="">
+          <label class="col-form-label">Deposits</label>
+          <input formControlName="deposit" class="form-control" type="text" placeholder="Nhập tiền đặt cọc">
+        </div>
+        <div class="">
+          <label class="col-form-label">Start date<span class="text-danger">*</span></label>
+          <input
+            [class]="createFormContract.get('startDay').invalid && createFormContract.get('startDay').touched ? 'border-danger' : ''"
+            (change)="moneyByService()" formControlName="startDay" class="form-control" type="date">
+        </div>
+        <p class="text-danger errors"
+           *ngIf="createFormContract.get('startDay').hasError('required') && createFormContract.get('startDay').touched">
+          Start Date is not required</p>
+        <div class="">
+          <label
+            [class]="createFormContract.get('endDay').invalid && createFormContract.get('endDay').touched ? 'border-danger' : ''"
+            class="col-form-label">End Date<span class="text-danger">*</span></label>
+          <input (change)="moneyByService()" formControlName="endDay" class="form-control" type="date">
+        </div>
+        <p class="text-danger errors"
+           *ngIf="createFormContract.get('endDay').hasError('required') && createFormContract.get('endDay').touched">
+          End Date is not required</p>
+        <p class="text-danger errors"
+           *ngIf="createFormContract.errors?.dayEndError && createFormContract.get('endDay').touched">
+          End Date > Start Date</p>
+      </div>
+
+      <div class="mt-5">
+        <h5>Attach Service</h5>
+        <div class="row">
+          <div *ngFor="let attachService of attachServiceList; let i = index" class="col-6">
+            <label class="col-form-label"> {{attachService.name}} : </label>
+            <input min="0" (change)="moneyByAttachService(i, $event.target.value)" class="form-control"
+                   type="number">
+          </div>
+        </div>
+      </div>
+
+
+      <h3>Total Money</h3>
+      <div class="col-12">
+        <div class="row">
+          <input [value]="totalMoneyTemp" formControlName="totalMoney" class="form-control" type="text" readonly>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="text-center ">
+      <button type="button" class="btn btn-white" [routerLink]="['/contract']">Back</button>&nbsp;
+      <button type="submit" class="btn btn-success" >Create</button>
+    </div>
+  </form>
+</div>
